@@ -17,14 +17,13 @@ jobs:
       - name: Check if Release Branch Exists
         run: |
           branch_name=release_$(date +'%Y%m%d')
-          git show-ref --quiet refs/heads/$branch_name
+          echo $branch_name
+          # git show-ref --quiet refs/heads/$branch_name
         
           ## Did we found IP address? Use exit status of the grep command ##
-          if [ $? -eq 0 ]
-          then
-            echo "$branch_name branch found, So not creating branch"
-          else
-            echo "$branch_name branch not found, Creating branch"
-            #git switch -c "$branch_name"
-            #git push origin $branch_name
-          fi
+          # if [ $? -eq 0 ]
+          # then
+          #   echo "$branch_name branch found, So not creating branch"
+          # else
+          #   echo "$branch_name branch not found, Creating branch"
+          # fi
