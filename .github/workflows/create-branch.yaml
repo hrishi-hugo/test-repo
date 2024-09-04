@@ -18,12 +18,12 @@ jobs:
         run: |
           branch_name=release_$(date +'%Y%m%d')
           echo $branch_name
-          # git show-ref --quiet refs/heads/$branch_name
+          
         
           ## Did we found IP address? Use exit status of the grep command ##
-          # if [ $? -eq 0 ]
-          # then
-          #   echo "$branch_name branch found, So not creating branch"
-          # else
-          #   echo "$branch_name branch not found, Creating branch"
-          # fi
+          if [ (git show-ref --quiet refs/heads/$branch_name) -eq 0 ]
+          then
+            echo "$branch_name branch found, So not creating branch"
+          else
+            echo "$branch_name branch not found, Creating branch"
+          fi
