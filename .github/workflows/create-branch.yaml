@@ -1,0 +1,33 @@
+name: Create Release Branch
+
+on:
+  workflow_dispatch:
+
+env:
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+permissions:
+  contents: write
+
+jobs:
+  create-branch:
+    runs-on: ubuntu-latest
+    if: github.ref_name == 'main'
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Check if Release Branch Exists
+        run: |
+          branch_name=release_$(date +'%Y%m%d')
+          git show-ref --quiet refs/heads/$branch_name
+        
+          ## Did we found IP address? Use exit status of the grep command ##
+          if [ $? -eq 0 ]
+          then
+            echo "$branch_name branch found, So not creating branch"
+          else
+            echo "$branch_name branch not found, Creating branch"
+            #git switch -c "$branch_name"
+            #git push origin $branch_name
+          fi
