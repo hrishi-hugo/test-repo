@@ -6,9 +6,6 @@ on:
 env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-permissions:
-  contents: write
-
 jobs:
   create-branch:
     runs-on: ubuntu-latest
