@@ -21,7 +21,7 @@ jobs:
           
         
           ## Did we found IP address? Use exit status of the grep command ##
-          if [ (git show-ref --quiet refs/heads/$branch_name) -eq 0 ]
+          if [ git show-ref --quiet refs/heads/$branch_name -eq 0 ]
           then
             echo "$branch_name branch found, So not creating branch"
           else
