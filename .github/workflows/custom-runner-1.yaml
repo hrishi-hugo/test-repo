@@ -1,0 +1,16 @@
+name: Customer Runner testing
+
+on:
+  workflow_dispatch:
+
+jobs:
+  create-branch:
+    runs-on: gh-runner-1
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Check if Release Branch Exists
+        run: |
+          touch hello.txt
+          echo "how are you" >> hello.txt
