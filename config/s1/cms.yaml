@@ -1,0 +1,16 @@
+flags:
+  feature1: true
+  feature2: false
+
+scheduler:
+  bill_generation: "1 2 3 4"
+  account_state: "6 3 4 5"
+
+nested:
+  level1:
+    level11: 5
+  level2:
+    level21: 10
+  level3:
+    level31:
+      level 311: 15
