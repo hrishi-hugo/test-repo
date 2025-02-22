@@ -1,6 +1,6 @@
 flags:
-  feature1: true
-  feature2: true
+  feature1: false
+  feature2: false
   feature3: false
 
 scheduler:
