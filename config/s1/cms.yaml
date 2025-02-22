@@ -1,7 +1,7 @@
 flags:
-  feature1: true
+  feature1: false
   feature2: true
-  feature3: true
+  feature3: false
 
 scheduler:
   bill_generation: "45 546 22 ff"
@@ -14,4 +14,4 @@ nested:
     level21: 11
   level3:
     level31:
-      level311: 234das
+      level311: 22dxsa
