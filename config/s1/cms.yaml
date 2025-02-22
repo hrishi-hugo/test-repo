@@ -1,16 +1,17 @@
 flags:
   feature1: true
   feature2: true
+  feature3: true
 
 scheduler:
-  bill_generation: "1 5 6 4"
-  account_state: "6 3 4 8"
+  bill_generation: "38 38 9911 33"
+  account_state: "6 6 4 8"
 
 nested:
   level1:
-    level11: 800
+    level11: 24fd
   level2:
-    level21: 900
+    level21: 10000
   level3:
     level31:
-      level 311: 1000
+      level 311: 1034ec00
