@@ -1,4 +1,5 @@
 flags:
+  feature1: false
   feature2: true
   feature3: true
 
